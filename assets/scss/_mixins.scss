@@ -1,0 +1,16 @@
+@mixin inizialmente {
+  opacity: 0;
+  animation: fadeIn 1s forwards, fadeInDown 1s forwards;
+}
+@mixin titleBig {
+  font-family: $font;
+  font-size: $font-grande;
+}
+@mixin floating {
+  border-radius: 30%;
+  box-shadow: black;
+  border: 1px solid white;
+}
+@mixin grid {
+  display: flex;
+}

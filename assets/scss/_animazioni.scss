@@ -1,0 +1,35 @@
+.hero {
+  opacity: 0;
+  animation: fadeInDown 1s forwards;
+  background-color: $bg-hero;
+  display: flex;
+  margin-top: $marginesup;
+  justify-content: center;
+  align-items: center;
+  p {
+    margin-left: 25px;
+    @include inizialmente();
+  }
+  img {
+    @include inizialmente();
+    @include floating();
+  }
+}
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px); /* Sposta verso l'alto di 20px */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Nessuna trasformazione, posizione finale */
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

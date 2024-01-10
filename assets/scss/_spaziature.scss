@@ -1,0 +1,49 @@
+$marginesup: 20px;
+body {
+  width: 100%;
+}
+
+nav {
+  width: 100%;
+  ul li a {
+    padding: 15px;
+    img {
+      width: 100px;
+    }
+  }
+  ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    align-items: center;
+  }
+}
+.grid {
+  margin-top: $marginesup;
+  display: flex;
+  flex-wrap: wrap;
+  img {
+    width: 40%;
+    padding: 10px;
+  }
+}
+// Definizione delle variabili per i valori di padding desiderati
+$padding-values: (
+  sm: 5px,
+  normal: 10px,
+  md: 15px,
+  lg: 20px,
+  xl: 25px,
+  xxl: 30px,
+);
+
+// Creazione dinamica delle classi per il padding in linea e blocco
+@each $padding-name, $padding-value in $padding-values {
+  .padding-block-#{$padding-name} {
+    padding-block: $padding-value;
+  }
+
+  .padding-inline-#{$padding-name} {
+    padding-inline: $padding-value;
+  }
+}
